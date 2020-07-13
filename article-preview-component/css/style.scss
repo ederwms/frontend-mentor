@@ -1,0 +1,54 @@
+$VeryDarkGrayishBlue: hsl(217, 19%, 35%);
+$DesaturatedDarkBlue: hsl(214, 17%, 51%);
+$GrayishBlue: hsl(212, 23%, 69%);
+$LightGrayishBlue: hsl(210, 46%, 95%);
+
+* { font-family: 'Manrope', sans-serif; margin: 0; padding: 0; border: 0; outline: none; box-sizing: border-box; }
+
+html, body { width: 100%; height: 100%; font-size: 13px; background-color: $LightGrayishBlue; }
+
+main { display: flex; justify-content: center; align-items: center; height: 100%;
+  div.article-wrapper { display: flex; justify-content: space-between; align-items: center; width: 730px; height: 280px; background-color: #fff; border-radius: 15px;
+    @media all and (max-width: 768px) { flex-direction: column; height: 550px; width: 375px; }
+
+    img.drawers-image { max-height: 280px; border-radius: 15px 0 0 15px;
+      @media all and (max-width: 768px) { width: 100%; border-radius: 15px 15px 0 0; }
+    }
+
+    div.details-wrapper { height: 100%; padding: 32px; color: $VeryDarkGrayishBlue;
+      span.details-title { display: block; font-size: 18px; font-weight: bold; margin-bottom: 16px; }
+
+      span.details-description { display: block; margin-bottom: 16px; }
+
+      div.details-social { display: flex; justify-content: space-between; align-items: center;
+        div.post-details { display: flex; justify-content: space-between; align-items: initial;
+          img.user-avatar { width: 40px; height: 40px; margin-right: 16px; border-radius: 100%; object-fit: cover; }
+
+          div.user-details { display: flex; flex-direction: column; justify-content: space-around; align-items: flex-start;
+            span.username { font-weight: bold; line-height: 1; }
+
+            span.date { line-height: 1; color: $GrayishBlue; }
+          }
+        }
+
+        div.share { display: flex; justify-content: center; align-items: center; width: 40px; height: 40px; border-radius: 100%; background-color: $LightGrayishBlue; cursor: pointer; list-style-type: none; position: relative; transition: 0.5s;
+          &.clicked { background-color: $VeryDarkGrayishBlue;
+            i.fa-share { color: $LightGrayishBlue; }
+
+            div.share-tooltip { visibility: visible; opacity: 1; transform: translateY(0px); }
+          }
+
+          i.fa-share { color: $VeryDarkGrayishBlue; }
+
+          div.share-tooltip { display: flex; justify-content: center; align-items: center; position: absolute; bottom: 55px; padding: 16px 24px; border-radius: 10px; background-color: $VeryDarkGrayishBlue; visibility: hidden; opacity: 0; transition: 0.5s; transform: translateY(-50px);
+            &::before { content: ''; position: absolute; bottom: -5px; width: 10px; height: 10px; background-color: $VeryDarkGrayishBlue; transform: rotate(45deg); }
+
+            span.share-text { color: $LightGrayishBlue; text-transform: uppercase; letter-spacing: 8px; }
+
+            img.social-media-icon { margin: 0 8px; }
+          }
+        }
+      }
+    }
+  }
+}

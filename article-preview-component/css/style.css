@@ -1,0 +1,229 @@
+* {
+  font-family: 'Manrope', sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-size: 13px;
+  background-color: #ecf2f8;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+main div.article-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 730px;
+  height: 280px;
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+@media all and (max-width: 768px) {
+  main div.article-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 550px;
+    width: 375px;
+  }
+}
+
+main div.article-wrapper img.drawers-image {
+  max-height: 280px;
+  border-radius: 15px 0 0 15px;
+}
+
+@media all and (max-width: 768px) {
+  main div.article-wrapper img.drawers-image {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+  }
+}
+
+main div.article-wrapper div.details-wrapper {
+  height: 100%;
+  padding: 32px;
+  color: #48556a;
+}
+
+main div.article-wrapper div.details-wrapper span.details-title {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+main div.article-wrapper div.details-wrapper span.details-description {
+  display: block;
+  margin-bottom: 16px;
+}
+
+main div.article-wrapper div.details-wrapper div.details-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main div.article-wrapper div.details-wrapper div.details-social div.post-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: initial;
+      -ms-flex-align: initial;
+          align-items: initial;
+}
+
+main div.article-wrapper div.details-wrapper div.details-social div.post-details img.user-avatar {
+  width: 40px;
+  height: 40px;
+  margin-right: 16px;
+  border-radius: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main div.article-wrapper div.details-wrapper div.details-social div.post-details div.user-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+main div.article-wrapper div.details-wrapper div.details-social div.post-details div.user-details span.username {
+  font-weight: bold;
+  line-height: 1;
+}
+
+main div.article-wrapper div.details-wrapper div.details-social div.post-details div.user-details span.date {
+  line-height: 1;
+  color: #9eafc2;
+}
+
+main div.article-wrapper div.details-wrapper div.details-social div.share {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: #ecf2f8;
+  cursor: pointer;
+  list-style-type: none;
+  position: relative;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+main div.article-wrapper div.details-wrapper div.details-social div.share.clicked {
+  background-color: #48556a;
+}
+
+main div.article-wrapper div.details-wrapper div.details-social div.share.clicked i.fa-share {
+  color: #ecf2f8;
+}
+
+main div.article-wrapper div.details-wrapper div.details-social div.share.clicked div.share-tooltip {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+main div.article-wrapper div.details-wrapper div.details-social div.share i.fa-share {
+  color: #48556a;
+}
+
+main div.article-wrapper div.details-wrapper div.details-social div.share div.share-tooltip {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  bottom: 55px;
+  padding: 16px 24px;
+  border-radius: 10px;
+  background-color: #48556a;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
+}
+
+main div.article-wrapper div.details-wrapper div.details-social div.share div.share-tooltip::before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  width: 10px;
+  height: 10px;
+  background-color: #48556a;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+main div.article-wrapper div.details-wrapper div.details-social div.share div.share-tooltip span.share-text {
+  color: #ecf2f8;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+}
+
+main div.article-wrapper div.details-wrapper div.details-social div.share div.share-tooltip img.social-media-icon {
+  margin: 0 8px;
+}
+/*# sourceMappingURL=style.css.map */
