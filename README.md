@@ -8,5 +8,5 @@ The purpose is to practice and refine my skills by solving real-world HTML, CSS 
 
 Simple component for article preview using HTML, SCSS and Javascript.
 
-- Challenge available in this link: https://www.frontendmentor.io/challenges/article-preview-component-dYBN_pYFT
-- Solution available in this link: https://ederwms.github.io/frontend-mentor/article-preview-component/
+- Challenge available in [this link](https://www.frontendmentor.io/challenges/article-preview-component-dYBN_pYFT)
+- Solution available in [this link](https://ederwms.github.io/frontend-mentor/article-preview-component/)
