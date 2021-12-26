@@ -15,7 +15,9 @@ Simple component for article preview using HTML, SCSS and Javascript.
 ## Challenge #2
 ## IP Address Tracker
 
-IP Address Tracker app using [IP Geolocation API by IPify](https://geo.ipify.org/) and to generate the map: [LeafletJS](https://leafletjs.com/).
+IP Address Tracker app using [IP Geolocation API by IPify](https://geo.ipify.org/) and [LeafletJS](https://leafletjs.com/) to generate the map.
+
+Project [README](./ip-address-tracker/README.md)
 
 - Challenge Available in [this link](https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0/hub/ip-address-tracker-_uZWiRMBJ)
 - Solution available in [this link](https://ederwms.github.io/frontend-mentor/ip-address-tracker/)
