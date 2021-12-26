@@ -24,8 +24,8 @@ const app = Vue.createApp({
   },
   mounted() {
     this.createMap()
-    this.addMarker(37.38605, -122.08385, '8.8.8.8')
-    this.goToLocation(37.38605, -122.08385)
+    // this.addMarker(37.38605, -122.08385, '8.8.8.8')
+    // this.goToLocation(37.38605, -122.08385)
   },
   methods: {
     searchIp() {
