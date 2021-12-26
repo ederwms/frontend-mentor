@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""
+  />
+
+  <script src="https://unpkg.com/vue@next"></script>
+
+  <title>Frontend Mentor | IP Address Tracker</title>
+</head>
+
+<body>
+  <div id="app">
+    <header class="header">
+      <h1 class="title"> IP Address Tracker </h1>
+
+      <div class="search">
+        <input
+          v-model="ipInputField"
+          class="search__input"
+          type="text"
+          name="ip"
+          id="ip"
+          placeholder="Search for any IP address or domain"
+          @keypress.enter="searchIp"
+        >
+
+        <button class="search__btn" @click="searchIp">
+          <img src="./images/icon-arrow.svg" alt="Arrow icon">
+        </button>
+      </div>
+    </header>
+
+    <section class="results">
+      <div class="result">
+        <h4 class="result__label">IP Address</h4>
+
+        <span class="result__info">
+          {{ ipData.ip }}
+        </span>
+      </div>
+
+      <div class="result">
+        <h4 class="result__label">Location</h4>
+
+        <span class="result__info">
+          {{ `${ipData.location.city}, ${ipData.location.country} ${ipData.location.postalCode}` }}
+        </span>
+      </div>
+
+      <div class="result">
+        <h4 class="result__label">Timezone</h4>
+
+        <span class="result__info">
+          UTC {{ ipData.location.timezone }}
+        </span>
+      </div>
+
+      <div class="result">
+        <h4 class="result__label">ISP</h4>
+
+        <span class="result__info">
+          {{ ipData.isp }}
+        </span>
+      </div>
+    </section>
+
+    <section class="map-wrapper">
+      <div id="map"></div>
+    </section>
+
+    <loader v-show="isLoading" />
+
+    <!-- <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/ederwms">Éder Sousa</a>.
+    </div> -->
+  </div>
+
+  <script
+    src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""
+  ></script>
+  <script src="script.js"></script>
+</body>
+</html>
