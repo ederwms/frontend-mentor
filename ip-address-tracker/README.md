@@ -34,8 +34,8 @@ The [challenge](https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL [here](https://github.com/ederwms/frontend-mentor/tree/master/ip-address-tracker)
+- Live Site URL [here](https://ederwms.github.io/frontend-mentor/ip-address-tracker/)
 
 ## My process
 
